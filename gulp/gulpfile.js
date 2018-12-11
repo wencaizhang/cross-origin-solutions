@@ -7,7 +7,7 @@ const target = 'http://api.meijujingxuan.com';
 const root = './src';
 const port = 8888;
 
-gulp.task('dev', function () {
+gulp.task('server', function () {
   connect.server({
     root: root,
     port: port,
