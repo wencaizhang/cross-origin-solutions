@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+
+<body>
+  <h1>Nginx 跨域访问接口-demo页面</h1>
+
+  <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+  <script>
+    var param = {
+      userid: 8
+    }
+    
+    var proxy = '/proxy';
+    var url = '/Index/GetCaseAd'
+
+    $.ajax({
+      url:  url,
+      // url:  proxy + url,
+      type: 'post',
+      contentType: "application/json",
+      dataType: "json",
+      data: JSON.stringify(param),
+      success: function (resp) {
+        console.log(resp);
+      },
+      error: function (err) {
+        console.log('err', err)
+      }
+    })
+  </script>
+</body>
+
+</html>
